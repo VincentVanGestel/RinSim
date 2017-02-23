@@ -100,9 +100,9 @@ public final class GraphHeuristics {
   abstract static class AbstractMadGraphHeuristic
       implements Serializable, Graphs.Heuristic {
 
-    private static final long serialVersionUID = 1L;
-
     static final String R_BRACE = ")";
+
+    private static final long serialVersionUID = 1L;
 
     @Nullable
     private Graph<?> lastGraph;
