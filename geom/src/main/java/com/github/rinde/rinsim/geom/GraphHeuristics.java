@@ -15,6 +15,8 @@
  */
 package com.github.rinde.rinsim.geom;
 
+import java.io.Serializable;
+
 import javax.annotation.Nullable;
 import javax.measure.Measure;
 import javax.measure.quantity.Duration;
@@ -95,7 +97,11 @@ public final class GraphHeuristics {
     }
   }
 
-  abstract static class AbstractMadGraphHeuristic implements Graphs.Heuristic {
+  abstract static class AbstractMadGraphHeuristic
+      implements Serializable, Graphs.Heuristic {
+
+    private static final long serialVersionUID = 1L;
+
     static final String R_BRACE = ")";
 
     @Nullable
